@@ -39,7 +39,9 @@
       "privateWorkflows": []
     },
     "processOptions": {
-      "ignoredFiles": []
+      "ignoredFiles": [
+        "input.xlsx"
+      ]
     },
     "fileInfoCollection": [],
     "modernBehavior": false
