@@ -1,5 +1,5 @@
 {
-  "name": "SAP_Web_Automation",
+  "name": "SAPWebAutomation",
   "description": "SAP Web Automation",
   "main": "Main.xaml",
   "dependencies": {
@@ -10,6 +10,7 @@
     "UiPath.Database.Activities": "[1.4.0]",
     "UiPath.Excel.Activities": "[2.11.1-preview]",
     "UiPath.Mail.Activities": "[1.11.2-preview]",
+    "UiPath.PDF.Activities": "[3.4.1]",
     "UiPath.System.Activities": "[21.8.0-preview]",
     "UiPath.UIAutomation.Activities": "[21.8.0-preview]"
   },
@@ -21,6 +22,7 @@
   "runtimeOptions": {
     "autoDispose": false,
     "isPausable": true,
+    "isAttended": false,
     "requiresUserInteraction": true,
     "supportsPersistence": false,
     "excludedLoggedData": [
@@ -29,7 +31,8 @@
     ],
     "executionType": "Workflow",
     "readyForPiP": false,
-    "startsInPiP": false
+    "startsInPiP": false,
+    "mustRestoreAllDependencies": false
   },
   "designOptions": {
     "projectProfile": "Developement",
@@ -55,5 +58,6 @@
   ],
   "isTemplate": false,
   "templateProjectData": {},
-  "publishData": {}
+  "publishData": {},
+  "targetFramework": "Legacy"
 }
