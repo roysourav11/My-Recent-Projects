@@ -1,0 +1,27 @@
+{
+  "name": "RetryScope",
+  "description": "Blank Process",
+  "main": "DownloadReport.xaml",
+  "dependencies": {
+    "UiPath.System.Activities": "[19.7.0]",
+    "UiPath.UIAutomation.Activities": "[19.7.0]"
+  },
+  "schemaVersion": "3.2",
+  "studioVersion": "19.6.0.74",
+  "projectVersion": "1.0.0",
+  "runtimeOptions": {
+    "autoDispose": false,
+    "isPausable": true,
+    "excludedLoggedData": [
+      "Private:*",
+      "*password*"
+    ]
+  },
+  "projectType": "Workflow",
+  "expressionLanguage": "VisualBasic",
+  "libraryOptions": {
+    "includeOriginalXaml": false,
+    "privateWorkflows": []
+  },
+  "webServices": []
+}
