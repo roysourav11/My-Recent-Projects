@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1007,3036" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1007,3067" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="42">
       <x:String>System.Activities</x:String>
@@ -79,10 +79,9 @@
       <AssemblyReference>UiPath.Mail</AssemblyReference>
       <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="QuarterClose" sap:VirtualizedContainerService.HintSize="1017,2971" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="QuarterClose" sap:VirtualizedContainerService.HintSize="1017,3002" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="strQuarterCloseURL" />
       <Variable x:TypeArguments="x:String" Name="strPassword" />
@@ -92,11 +91,7 @@
       <Variable x:TypeArguments="x:Boolean" Name="isArcadiaExists" />
       <Variable x:TypeArguments="x:Boolean" Name="isAccountOverviewExists" />
       <Variable x:TypeArguments="scg:List(x:Int32)" Name="intTransactionList" />
-      <Variable x:TypeArguments="x:Int32" Name="intTransaction">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:Int32" Value="1" />
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="x:Int32" Default="1" Name="intTransaction" />
       <Variable x:TypeArguments="x:Boolean" Name="isTransactionExists" />
       <Variable x:TypeArguments="sd:DataTable" Name="dtMasterFinancial" />
       <Variable x:TypeArguments="x:String" Name="strPaymentAccount" />
@@ -158,13 +153,13 @@
       </ui:MultipleAssign.AssignOperations>
     </ui:MultipleAssign>
     <ui:GetPassword DisplayName="Get Password" sap:VirtualizedContainerService.HintSize="975,22" sap2010:WorkflowViewState.IdRef="GetPassword_1" ProtectedPassword="AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAK7LO8fM400+RKTBeOgMueQAAAAACAAAAAAAQZgAAAAEAACAAAAB8zX+Vd02T11tW99lfDG0OTCsXHwCwaHDOAK8wXJHtuwAAAAAOgAAAAAIAACAAAACxPUKgWO9bZV/0sj5AeHiUvvdJkII9mvjk7m+xuyNAehAAAAB+VlNLW3SBCIE5SfWgwEHZQAAAAImLSvdapkYe7IyL9H2iy3ScRODvXp90QwXMsBORR4tZ9pf+BVSmfKBLaitwIWhWpkUaJGWx7r/fqjcEE7UHor0=" Result="[strPassword]" />
-    <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="975,2584" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" NewSession="True" Url="[strQuarterCloseURL]">
+    <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="975,2615" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" NewSession="True" Url="[strQuarterCloseURL]">
       <ui:OpenBrowser.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="941,2483" sap2010:WorkflowViewState.IdRef="Sequence_23">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="941,2514" sap2010:WorkflowViewState.IdRef="Sequence_23">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -176,11 +171,12 @@
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e38848ba-f5bc-4d27-8edd-83aed6d654c8" Selector="&lt;html app='chrome.exe' title='Automation Anywhere Labs - Quarter Close Challenge' /&gt;&lt;webctrl tag='H2' aaname='Quarter Close - Review Transactions' /&gt;" TimeoutMS="3000" WaitForReady="COMPLETE" />
               </ui:UiElementExists.Target>
             </ui:UiElementExists>
-            <If Condition="[isQuarterCloseExists]" sap:VirtualizedContainerService.HintSize="899,51" sap2010:WorkflowViewState.IdRef="If_2">
+            <If sap2010:Annotation.AnnotationText="Checking" Condition="[isQuarterCloseExists]" sap:VirtualizedContainerService.HintSize="899,82" sap2010:WorkflowViewState.IdRef="If_2">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <If.Then>
@@ -308,7 +304,7 @@
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e38848ba-f5bc-4d27-8edd-83aed6d654c8" Selector="&lt;html app='chrome.exe' title='Arcadia Financial - Account Overview' /&gt;&lt;webctrl tag='H1' aaname='Accounts Overview' /&gt;" TimeoutMS="3000" WaitForReady="COMPLETE" />
               </ui:UiElementExists.Target>
             </ui:UiElementExists>
-            <ui:InterruptibleWhile DisplayName="While" sap:VirtualizedContainerService.HintSize="899,51" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+            <ui:InterruptibleWhile Condition="[isTransactionExists]" DisplayName="While" sap:VirtualizedContainerService.HintSize="899,51" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
               <ui:InterruptibleWhile.Body>
                 <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,351" sap2010:WorkflowViewState.IdRef="Sequence_88">
                   <sap:WorkflowViewStateService.ViewState>
@@ -711,9 +707,6 @@
                   </Assign>
                 </Sequence>
               </ui:InterruptibleWhile.Body>
-              <ui:InterruptibleWhile.Condition>
-                <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="isTransactionExists" />
-              </ui:InterruptibleWhile.Condition>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
